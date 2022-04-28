@@ -1,4 +1,4 @@
-﻿Data Escala de Tempo 1 GE Simp 4;cod_aneel (tb_referenciacegusina (Usina));cod_nucleoaneel (tb_referenciacegusina (Usina));Data Dica;dsc_estado;id_subsistema;nom_tipousinasite;nom_usina2;Período Exibido GE;Selecione Tipo de GE Simp 4
+﻿Data_Escala_de_Tempo;cod_aneel_tb_referenciacegusina_Usina;cod_nucleoaneel_tb_referenciacegusina_Usina;Data_Dica;dsc_estado;id_subsistema;nom_tipousinasite;nom_usina2;Período_Exibido_GE;Selecione_Tipo_de_GE_Simp_4
 ;UTE.FL.RS.030666-5.01;030666-5;;RIO GRANDE DO SUL;Sul;Térmica; CMPC;5;170,814959
 01/01/2018 00:00:00;UTE.FL.RS.030666-5.01;030666-5;1/1/2018 0:00;RIO GRANDE DO SUL;Sul;Térmica; CMPC;5;0,02293
 01/01/2018 01:00:00;UTE.FL.RS.030666-5.01;030666-5;1/1/2018 1:00;RIO GRANDE DO SUL;Sul;Térmica; CMPC;5;0,019551
