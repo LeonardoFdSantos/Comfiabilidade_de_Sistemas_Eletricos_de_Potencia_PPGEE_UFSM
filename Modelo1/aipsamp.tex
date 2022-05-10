@@ -1,0 +1,184 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+
+\documentclass[conference]{IEEEtran}
+\usepackage{blindtext, graphicx}
+\usepackage{listings}
+\lstset { %
+    language=C++,
+    numbers=left,
+    breaklines=true,
+    xleftmargin=4em,
+    resetmargins=true,
+    basicstyle=\footnotesize,
+    numberstyle=\footnotesize,
+}
+\usepackage{graphicx}
+\usepackage[font=small]{caption}
+
+%Pacote para acentos [Por TIAGO]
+\usepackage[utf8]{inputenc}
+
+% Comment this line out
+                                                          % if you need a4paper
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
+                                                          % paper
+
+%\IEEEoverridecommandlockouts                              % This command is only
+                                                          % needed if you want to
+                                                          % use the \thanks command
+%\overrideIEEEmargins
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+
+
+% The following packages can be found on http:\\www.ctan.org
+%\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+%\usepackage{amsmath} % assumes amsmath package installed
+%\usepackage{amssymb}  % assumes amsmath package installed
+
+\title{Análise de Dados de Geração de Usinas}
+
+%\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
+%         \thanks{*Use the $\backslash$thanks command to put information here}\\
+%         Faculty of Electrical Engineering, Mathematics and Computer Science\\
+%         University of Twente\\
+%         7500 AE Enschede, The Netherlands\\
+%         {\tt\small h.kwakernaak@autsubmit.com}}
+%         \hspace*{ 0.5 in}
+%         \parbox{3 in}{ \centering Pradeep Misra**
+%         \thanks{**The footnote marks may be inserted manually}\\
+%        Department of Electrical Engineering \\
+%         Wright State University\\
+%         Dayton, OH 45435, USA\\
+%         {\tt\small pmisra@cs.wright.edu}}
+%}
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{
+\IEEEauthorblockN{Leonardo Felipe da Silva dos Santos}
+\IEEEauthorblockA{Santa Maria, Rio Grande do Sul, Brasil\\ Email: leonardo.santos@acad.ufsm.br}
+}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+
+With the emergence of systems archiving and distribution of PACS medical imaging, also emerged the need to store those images off-site environment , this project aims to study this need , trying to offer a service within an information infrastructure that can integrate the environment site with a remote environment , a transparent and heterogeneous , taking account of the needs of users of teleradiology.
+
+
+Keywords: PACS, teleradiology, Medical Imaging, Archiving.
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introdução}
+
+Ao se implementar imagens radiológicas digitalizadas nos procedimentos de diagnostico médico, foi incorporado a isto várias vantagens como por exemplo: ganho de velocidade no diagnostico e redução dos custos operacionais (HUANG, 2011)[1], com essa digitalização de imagens radiológicas, buscou-se uma forma de padronizar o gerenciamento dessas imagens, surgindo assim o PACS ( Picture Archiving Communication Systems).
+
+Dentro deste raciocínio, meus estudos propõem um serviço dentro de uma Infraestrutura que permita o armazenamento dessas imagens de forma: segura, heterogénea, escalável e evolutiva, tendo como elementos Sócio-Técnicos presentes nos atuais modelos teleradiológicos. 
+
+
+Para citar um artigo, voce deve utilizar \cite{IEEEexample:articleetal}, que referência um artigo contido no arquivo IEEEexample.bib. Para mais citações, você deve adicionar os metadados do artigo nesse arquivo no formato BibTex.
+
+\section{Proposta de pesquisa}
+
+Proponho como metodologia de pesquisa, efetuar mapeamento das soluções existentes na atualidade, classificá-los e propor uma reorganização dos elementos encontrados, para isso  será utilizado uma estratégia de pesquisa denominada Inversão Estrutural, do inglês Infrastructure Inversion, esta estratégia foi definida por Star e Brownker no livro Sorting Things Out (1999) [2], que também pode ser definida como uma estratégia focada principalmente nos modelos atuais, objetivando estudar o seu funcionamento interno, dessa forma torna-se possível identificar os elementos dos modelos atuais, encontrar possíveis diferenças entre os mesmo elementos em modelos distintos.
+
+\subsection{Subseção}
+
+Aqui é um exemplo de subseção.
+
+\subsection{Mais outra subseção}
+
+Voce pode adicionar quantas subseções desejar.
+
+\section{Resultados esperados}
+
+Com este estudo, espera-se obter um serviço de armazenamento dentro de uma Infraestrutura da Informação voltada para a teleradiologia, funciona transparente ao usuário, capaz de armazenar os objetos DICOM (imagens e metadados), fora dos ambientes locais, quando se não houver infraestrutura localmente, e caso seja necessário mesmo que se haja uma infraestrutura local, para que se possa ter uma maior interação entre os componentes dessa Infraestrutura, conforme exemplificado na figura 1.
+
+
+\subsection{Tópicos}
+
+Aqui está um exemplo de como escrever com tópicos:
+
+\begin{itemize}
+
+\item Primeiro tópico vem aqui.
+\item Seguido pelo próximo tópico
+\item E assim em diante...
+
+\end{itemize}
+
+
+\subsection{Equações}
+
+As equações podem vir desta forma. Consulte a literatura do LaTex sobre equações mais elaboradas.
+
+$$
+\alpha + \beta = \chi \eqno{(1)}
+$$
+
+\subsection{Figuras e tabelas}
+
+
+
+Neste exemplo apresentamos uma tabela simples, seguida de uma figura. Para citar, use o campo "label". Por exemplo, veja a Tabela \ref{table_example}.
+
+\begin{table}[h]
+\caption{Um exemplo de tabela}
+\label{table_example}
+\begin{center}
+\begin{tabular}{|c||c|}
+\hline
+One & Two\\
+\hline
+Three & Four\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+%O mesmo voce pode fazer para citar a Figura \ref{fig:cenario4.jpg}.
+
+\begin{figure}
+\centering
+\includegraphics[width=5.5cm]{cenario4.jpg}
+\caption{Usuários acessando o Storaged externo.}
+\label{fig:cenario}
+\end{figure}
+
+\section{Considerações finais}
+
+Atualmente a teleradiologia possui modelos que permitem essa integração de armazenamento em sua infraestrutura local, contudo, dispor de um serviço que consiga quebrar esse paradigma é bastante promissor, pois visa mostrar que a inercia presente na teleradiologia atual pode ser vencida.
+
+Através da definição dos elementos, torna-se possível que estes atuem como gateways entre os componentes já existentes permitindo que se transponha para um serviço global sem que haja alteração no fluxo de trabalho atual, mas que permita a este fluxo ter mais dinamismo.
+
+\addtolength{\textheight}{-12cm}   % This command serves to balance the column lengths
+                                  % on the last page of the document manually. It shortens
+                                  % the textheight of the last page by a suitable amount.
+                                  % This command does not take effect until the next page
+                                  % so it should come on the page before the last. Make
+                                  % sure that you do not shorten the textheight too much.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{IEEEtran}  
+\bibliography{IEEEexample}
+
+\end{document}
