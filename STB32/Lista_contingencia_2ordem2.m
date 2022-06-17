@@ -1,5 +1,5 @@
 % Prepara casos de contingência para o ANAREDE
-cd('C:\dev\Confiabilidade_de_Sistemas_Eletricos_de_Potencia_PPGEE_UFSM\STB32')               %Colocar o diretório onde quer salvar o arquivo
+cd('C:\dev\Confiabilidade_de_Sistemas_Eletricos_de_Potencia_PPGEE_UFSM\STB32');               %Colocar o diretório onde quer salvar o arquivo
 
 %% Dados de linhas
 %  DE PARA na sequência (L1, L2, ..., L10)
@@ -72,10 +72,10 @@ m=length(LC);             % Quantidade de combinações para análise
 %CIRD     1     2  1
 %CIRD     3     4  1
 %FCAS
-fileID = fopen('STSB32_Cont_2ordem_Miguel.pwf','wt');     % Batiza e abre o arquivo para escrita
+fileID = fopen('STSB32_Cont_2ordem_Leonardo.pwf','wt');     % Batiza e abre o arquivo para escrita
 fprintf(fileID,'DCTG\n');                                       % Comando para listar as contingências
 for i=1:m
-    fprintf(fileID,'%4u 0  2 Contigencia dupla de L%u e L%u\n',i+200,LC(i,1),LC(i,2));             % Descrição
+    fprintf(fileID,'%4u 0  2 Contigencia dupla de L%u e L%u\n',i+200,LT(LC(i,1),1),LT(LC(i,1),2));             % Descrição
     fprintf(fileID,'CIRD %4u  %4u   1\n',LT(LC(i,1),1),LT(LC(i,1),2));                                      % Linha A
     fprintf(fileID,'CIRD %4u  %4u   1\n',LT(LC(i,2),1),LT(LC(i,2),2));                                      % Linha B
     fprintf(fileID,'FCAS\n');                                                                                                           % Fim do Caso
