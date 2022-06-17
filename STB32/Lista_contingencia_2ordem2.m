@@ -72,7 +72,7 @@ m=length(LC);             % Quantidade de combinações para análise
 %CIRD     1     2  1
 %CIRD     3     4  1
 %FCAS
-fileID = fopen('STSB32_Cont_2ordem_Leonardo.pwf','wt');     % Batiza e abre o arquivo para escrita
+fileID = fopen('STSB32_Cont_2ordem_Miguel.pwf','wt');     % Batiza e abre o arquivo para escrita
 fprintf(fileID,'DCTG\n');                                       % Comando para listar as contingências
 for i=1:m
     fprintf(fileID,'%4u 0  2 Contigencia dupla de L%u e L%u\n',i+200,LC(i,1),LC(i,2));             % Descrição
