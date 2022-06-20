@@ -32,7 +32,7 @@ cd('C:\dev\Confiabilidade_de_Sistemas_Eletricos_de_Potencia_PPGEE_UFSM\STB32'); 
         934 960
         934 1047
         938 946
-        938 955
+%         938 955
 %         938 959
         947 939
         955 946
@@ -43,7 +43,7 @@ cd('C:\dev\Confiabilidade_de_Sistemas_Eletricos_de_Potencia_PPGEE_UFSM\STB32'); 
 %         964 976
         965 1057
         976 979
-        955 964
+%         955 964
 %         995 979
         995 1030
         955 1060
@@ -61,9 +61,9 @@ cd('C:\dev\Confiabilidade_de_Sistemas_Eletricos_de_Potencia_PPGEE_UFSM\STB32'); 
         963 965];
 
 %% Lista de Contingências
-n=length(LT);
+n = length(LT);
 LC = nchoosek(1:n,2);    %Combinação dois a dois das linhas que não provocam problemas
-m=length(LC);             % Quantidade de combinações para análise 
+m = length(LC);             % Quantidade de combinações para análise 
 
 %% Escreve o PWF
 %(Nc) O Pr (       IDENTIFICACAO DA CONTINGENCIA        )
@@ -75,7 +75,7 @@ m=length(LC);             % Quantidade de combinações para análise
 fileID = fopen('STSB32_Cont_2ordem_Leonardo.pwf','wt');     % Batiza e abre o arquivo para escrita
 fprintf(fileID,'DCTG\n');                                       % Comando para listar as contingências
 for i=1:m
-    fprintf(fileID,'%4u 0  2 Contigencia dupla de L%u e L%u\n',i+200,LT(LC(i,1),1),LT(LC(i,1),2));             % Descrição
+    fprintf(fileID,'%4u 0  2 Dupla de L%u entre L%u e L%u entre L%u\n',i+200, LT(LC(i,1),1),LT(LC(i,1),2), LT(LC(i,2),1),LT(LC(i,2),2));             % Descrição
     fprintf(fileID,'CIRD %4u  %4u   1\n',LT(LC(i,1),1),LT(LC(i,1),2));                                      % Linha A
     fprintf(fileID,'CIRD %4u  %4u   1\n',LT(LC(i,2),1),LT(LC(i,2),2));                                      % Linha B
     fprintf(fileID,'FCAS\n');                                                                                                           % Fim do Caso
