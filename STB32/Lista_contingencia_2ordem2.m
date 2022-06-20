@@ -1,5 +1,4 @@
 % Prepara casos de contingência para o ANAREDE
-cd('C:\dev\Confiabilidade_de_Sistemas_Eletricos_de_Potencia_PPGEE_UFSM\STB32');               %Colocar o diretório onde quer salvar o arquivo
 
 %% Dados de linhas
 %  DE PARA na sequência (L1, L2, ..., L10)
@@ -21,7 +20,8 @@ cd('C:\dev\Confiabilidade_de_Sistemas_Eletricos_de_Potencia_PPGEE_UFSM\STB32'); 
 %     10    11
 %     12    13
 %     13    14];
-    LT=[839 1047
+    LT=[
+        839 1047
         839 2458
         856 933
         856 1060
@@ -32,7 +32,7 @@ cd('C:\dev\Confiabilidade_de_Sistemas_Eletricos_de_Potencia_PPGEE_UFSM\STB32'); 
         934 960
         934 1047
         938 946
-%         938 955
+        938 955
 %         938 959
         947 939
         955 946
@@ -43,7 +43,7 @@ cd('C:\dev\Confiabilidade_de_Sistemas_Eletricos_de_Potencia_PPGEE_UFSM\STB32'); 
 %         964 976
         965 1057
         976 979
-%         955 964
+        955 964
 %         995 979
         995 1030
         955 1060
@@ -58,7 +58,8 @@ cd('C:\dev\Confiabilidade_de_Sistemas_Eletricos_de_Potencia_PPGEE_UFSM\STB32'); 
         1060 897
         1069 1041
         1041 963
-        963 965];
+        963 965
+        ];
 
 %% Lista de Contingências
 n = length(LT);
@@ -72,7 +73,7 @@ m = length(LC);             % Quantidade de combinações para análise
 %CIRD     1     2  1
 %CIRD     3     4  1
 %FCAS
-fileID = fopen('STSB32_Cont_2ordem_Leonardo.pwf','wt');     % Batiza e abre o arquivo para escrita
+fileID = fopen(['STSB32_Cont_2ordem_Leonardo.pwf'],'wt');     % Batiza e abre o arquivo para escrita
 fprintf(fileID,'DCTG\n');                                       % Comando para listar as contingências
 for i=1:m
     fprintf(fileID,'%4u 0  2 Dupla de L%u entre L%u e L%u entre L%u\n',i+200, LT(LC(i,1),1),LT(LC(i,1),2), LT(LC(i,2),1),LT(LC(i,2),2));             % Descrição
